@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/bower_components/firebase/firebase.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body ng-app='fireApp' ng-controller='mainCtrl'>
+		<h1>AngularFire!</h1>
+
+		<ul id="tweets">
+			<li ng-repeat='tweet in tweets | reverse'>{{tweet.screen_name}} - {{tweet.text}}</li>
+		</ul>
+
+  </body>
+</html>
